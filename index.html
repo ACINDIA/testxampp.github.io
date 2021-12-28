@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CHANDRA.CO</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="fav-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav-icon/favicon-16x16.png">
+    <link rel="manifest" href="fav-icon/site.webmanifest">
+    <link rel="mask-icon" href="fav-icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function showResult(str) {
+      if (str.length==0) {
+        document.getElementById("livesearch").innerHTML="";
+        document.getElementById("livesearch").style.border="0px";
+        return;
+      }
+      var xmlhttp=new XMLHttpRequest();
+      xmlhttp.onreadystatechange=function() {
+        if (this.readyState==4 && this.status==200) {
+          document.getElementById("livesearch").innerHTML=this.responseText;
+          document.getElementById("livesearch").style.background="#14181f";
+          document.getElementById("livesearch").style.padding="0px 0px 0px 15px";
+          document.getElementById("livesearch").style.color="white";
+          document.getElementById("livesearch").style;
+        }
+      }
+      xmlhttp.open("GET","livesearch.php?q="+str,true);
+      xmlhttp.send();
+    }
+    </script>
+</head>
+  <body>
+    <!--nav-start--------------------------------------------------------------------------------->
+    <div class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <div class="content">
+        <div class="logo"><a href="#">TG STUDIOS</a></div>
+          <ul class="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">HTML</a></li>
+            <li>
+              <a href="#" class="desktop-link">CSS</a>
+              <input type="checkbox" id="show-features">
+              <label for="show-features">Feature</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li><a href="#">Drop Menu 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="desktop-link">JAVASCRIPT</a>
+              <input type="checkbox" id="show-services">
+              <label for="show-services">Services</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li>
+                  <a href="#" class="desktop-link">More Items</a>
+                  <input type="checkbox" id="show-items">
+                  <label for="show-items">More Items</label>
+                  <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">PHP</a></li>
+          </ul>
+        </div>
+        <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+        <form action="#" class="search-box">
+          <input type="search" placeholder="Search..." required  onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
+          <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </form>
+      </nav>
+    </div>
+    <!--nav-end--------------------------------------------------------------------------------->
+    <!--up-icon-start--------------------------------------------------------------------------------->
+
+     <!--up-icon-end--------------------------------------------------------------------------------->
+
+
+  <!--content-area-start--------------------------------------------------------------------------------->
+    <div class="maincontent">
+    </div>
+    <section  class="intro-demo">
+      <div class=" intro-container">
+        <h2  class="intro-h2">WELCOME DEVELOPERS</h2>
+        <div class="opening-test">
+          <h1  class="opening-text">Find your code here</h1>
+        </div>
+        <p class="intro-p">Here you can explore your dev world, and create your imagination as reality. here you can get everything that you want you can make your website more amazing, and power your creativity.</p>
+        <a name="takealook"></a>
+        <a href="#takealook"  class="intro-p2">Take a look</a>
+        <br>
+        <a name="takearrow"></a>
+        <p  class="takearrow"><a href="#takearrow"><i  class="fas fa-angle-down"></i></a></p>
+      </div>
+    </section>
+    <a href="#takealook"></a>
+    <a href="#takearrow"></a>
+  <!---content-area-end------------------------------------------------------------------------------>
+     <!--footer-start--------------------------------------------------------------------------------->
+     <div class="body">
+       <footer>
+         <div class="container">
+           <div class="sec aboutus">
+             <h2>ABOUT US</h2>
+             <p class="aboutusp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+             </p>
+             <ul class="sci">
+               <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+             </ul>
+           </div>
+           <div class="sec quicklinks">
+             <h2>Quick Links</h2>
+             <ul>
+               <li><a href="#">youtube</a></li>
+               <li><a href="#">link</a></li>
+               <li><a href="#">link</a></li>
+               <li><a href="#">link</a></li>
+             </ul>
+           </div>
+           <div class="sec contact">
+             <h2>Contact Info</h2>
+             <ul class="info">
+               <li>
+                   <span><i class="fas fa-map-marker-alt"></i></span>
+                   <span>
+                   adarsh colony<br>
+                   pimpalner 424306 dhule
+                   maharashtra<br>india
+                   </span>
+               </li>
+               <li>
+                   <span><i class="fas fa-phone"></i></span>
+                   <p><a href="tel:000000000">000000000</a>
+                   </p>
+               </li>
+               <li>
+                   <span><i class="fas fa-envelope"></i></span>
+                   <p><a href="mailto:example000@email.com">example000@email.com</a></p>
+               </li>
+             </ul>
+           </div>
+         </div>
+         <div class="copyrightText">
+           COPYRIGHT © 2020 CHANDRA.CO ALL RIGHTS RESERVED
+         </div>
+       </footer>
+     </div>
+     <!--footer-end--------------------------------------------------------------------------------->
+     <!--AdBlock-start--------------------------------------------------------------------------------->
+     <!--AdBlock-end--------------------------------------------------------------------------------->
+  </body>
+</html>
